@@ -3,12 +3,14 @@
 //membuat deklarasi variable
 $hostname = "localhost";
 $username = "root";
-$password = "";
+$password = "maulayyacyber17";
 $database = "website_penelitian";
 //create variable connectin
 $connection = mysqli_connect($hostname, $username, $password, $database);
 //checking connection
-if(!$connection)
+if($connection) // TRUE
   {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  	echo "koneksi berhasil!";
+  }else{
+  	echo "Koneksi Gagal!: " . mysqli_connect_error();	
   }
