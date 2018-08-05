@@ -6,11 +6,12 @@
 <body>
 
 	Test Penggunaan GIT
-<<<<<<< HEAD
-=======
+<br>
 
 	Miyah hadir
+	<br>
 	Mira Hadir
->>>>>>> b8299700c29be2c077b55e6ee9ba069a1dfd8f84
+	<br>
+	Fika hadir
 </body>
 </html>
