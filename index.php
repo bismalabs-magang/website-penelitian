@@ -6,6 +6,5 @@
 <body>
 
 	Test Penggunaan GIT
-	Belajar GIT-GHonirwan
 </body>
 </html>
