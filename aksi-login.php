@@ -2,7 +2,7 @@
 //hide error
 error_reporting(0);
 
-//create sessio start
+//create session start
 session_start();
 
 //panggil koneksi PHP
