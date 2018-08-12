@@ -31,7 +31,7 @@
     <link href="../assets/css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
-<body class="theme-green">
+<body class="theme-teal">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
