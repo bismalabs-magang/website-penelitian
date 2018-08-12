@@ -1,3 +1,28 @@
-selamat datang di halaman dosen<br>
+<?php
+//check level
+session_start();
+if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
+    ?>
 
-<a href="logout.php">Keluar</a>
+    <?php
+    //include header.php
+    include("part/header.php");
+    ?>
+
+    <?php
+    //include sidebar.php
+    include("part/sidebar.php");
+    ?>
+
+    <!-- start content -->
+
+    <!-- end content -->
+
+    <?php
+    //include footer.php
+    include("part/footer.php");
+    ?>
+
+<?php }else{ ?>
+    <?php header("location:../login.php")  ?>
+<?php } ?>
