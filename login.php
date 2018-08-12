@@ -24,7 +24,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="login-page" style="background-color: #388E3C">
+<body class="login-page" style="background-color: #209688">
     <div class="login-box">
         <div class="logo">
             <a href="index.php"><img src="images/logo.png"></a>
