@@ -20,9 +20,15 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
             <div class="row clearfix">
                 <div class="col-md-12">
                     <div class="card">
+                        <div class="header">
+                            <h2>
+                                DASHBOARD
+                            </h2>
+                            <div class="header-dropdown m-r--5">
+
+                            </div>
+                        </div>
                         <div class="body">
-                            <label>DASHBOARD</label>
-                            <hr>
                         </div>
                     </div>
                 </div>

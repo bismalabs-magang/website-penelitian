@@ -21,6 +21,9 @@
     <!-- Animation Css -->
     <link href="../assets/plugins/animate-css/animate.css" rel="stylesheet" />
 
+    <!-- JQuery DataTable Css -->
+    <link href="../assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+
     <!-- Morris Chart Css-->
     <link href="../assets/plugins/morrisjs/morris.css" rel="stylesheet" />
 
