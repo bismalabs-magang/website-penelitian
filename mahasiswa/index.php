@@ -1,7 +1,7 @@
 <?php
 //check level
 session_start();
-if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
+if($_SESSION['level'] == "mahasiswa" AND $_SESSION['username'] == TRUE) {
     ?>
 
     <?php
