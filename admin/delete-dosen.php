@@ -3,8 +3,8 @@
 //include koneksi ke database
 include_once('../config/koneksi.php');
 //get nidn
-$nidn = $_GET['nidn'];
-$query = "DELETE FROM tbl_dosen WHERE nidn = '$nidn'";
+$id = $_GET['id'];
+$query = "DELETE FROM tbl_dosen WHERE nidn = '$id'";
 $result = mysqli_query($connection, $query);
 if ($connection->query($query) === TRUE) {
 	echo "Delete record  successfully";
