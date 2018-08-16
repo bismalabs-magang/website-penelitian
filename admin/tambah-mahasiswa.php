@@ -1,4 +1,3 @@
-<?php 
 <?php
 //check level
 session_start();
@@ -31,23 +30,23 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 						</div>
 						<div class="body">
 							
-							<form action="simpan-dosen.php" method="POST">
+							<form action="simpan-mahasiswa.php" method="POST">
 								<div class="form-group">
 									<label>NAMA MAHASISWA</label>
 										<div class="form-line">
-											<input type="text" name="nama" class="form-control" placeholder="Nama Dosen" />
+											<input type="text" name="nama" class="form-control" placeholder="Nama Mahasiswa" />
 										</div>
 									</div>
 									<div class="form-group">
 										<label>NIM</label>
 										<div class="form-line">
-											<input type="text" name="nidn" class="form-control" placeholder="NIDN Dosen" />
+											<input type="text" name="nim" class="form-control" placeholder="Nim Mahasiswa" />
 										</div>
 									</div>
 									<div class="form-group">
 										<label>PASSWORD</label>
 										<div class="form-line">
-											<input type="password" name="password" class="form-control" placeholder="Password Dosen" />
+											<input type="password" name="password" class="form-control" placeholder="Password Mahasiswa" />
 										</div>
 									</div>
 
