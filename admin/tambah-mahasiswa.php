@@ -1,3 +1,4 @@
+<?php 
 <?php
 //check level
 session_start();
@@ -22,7 +23,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 					<div class="card">
 						<div class="header">
 							<h2>
-								TAMBAH DATA DOSEN
+								TAMBAH DATA MAHASISWA
 							</h2>
 							<div class="header-dropdown m-r--5">
 								
@@ -32,13 +33,13 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 							
 							<form action="simpan-dosen.php" method="POST">
 								<div class="form-group">
-									<label>NAMA DOSEN</label>
+									<label>NAMA MAHASISWA</label>
 										<div class="form-line">
 											<input type="text" name="nama" class="form-control" placeholder="Nama Dosen" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label>NIDN</label>
+										<label>NIM</label>
 										<div class="form-line">
 											<input type="text" name="nidn" class="form-control" placeholder="NIDN Dosen" />
 										</div>
@@ -79,3 +80,5 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 <?php }else{ ?>
 	<?php header("location:../login.php")  ?>
 <?php } ?>
+
+?>
