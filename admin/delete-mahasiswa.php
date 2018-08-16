@@ -8,8 +8,8 @@
 //include koneksi ke database
 include_once('../config/koneksi.php');
 //get id
-$id = $_GET['NIM'];
-$query = "DELETE FROM tbl_mahasiswa WHERE id_mhs = '$id'";
+$id = $_GET['id'];
+$query = "DELETE FROM tbl_mahasiswa WHERE nim = '$id'";
 $result = mysqli_query($connection, $query);
 if ($connection->query($query) === TRUE) {
     echo "Delete record  successfully";
