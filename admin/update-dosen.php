@@ -18,9 +18,7 @@ if ($password == "") {
 
 
 if ($connection->query($query) === TRUE) {
-    echo "Update record  successfully";
-    echo "<br>";
-    echo "<button><a href='dosen.php'>Kembali</a></button>";
+    header("location:dosen.php");
 } else {
     echo "Error: " . $query . "<br>" . $connection->error;
     echo "<br>";
