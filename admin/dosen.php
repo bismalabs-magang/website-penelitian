@@ -53,7 +53,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 										<td><?php echo $row["nama_dosen"] ?></td>
 										<td><?php echo $row["id_fakultas"] ?></td>
 										<td style="text-align: center">
-											<a href="edit-dosne.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
+											<a href="edit-dosen.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
 
 											<a href="delete-dosen.php?id=<?php echo $row["nidn"] ?>" class="btn btn-danger btn-sm">Delete</a>
 										</td>
