@@ -3,8 +3,8 @@
 //membuat deklarasi variable
 $hostname = "localhost";
 $username = "root";
-$password = "maulayyacyber17";
-$database = "website_penelitian";
+$password = "";
+$database = "website-penelitian";
 //create variable connectin
 $connection = mysqli_connect($hostname, $username, $password, $database);
 //checking connection

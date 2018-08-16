@@ -26,7 +26,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
                             </h2>
                             <div class="header-dropdown m-r--5">
                                 <li class="dropdown">
-                                    <a href="tambah-dosen.php" class="btn btn-success btn-md">TAMBAH MAHASISWA</a>
+                                    <a href="tambah-mahasiswa.php" class="btn btn-success btn-md">TAMBAH MAHASISWA</a>
                                 </li>
                             </div>
                         </div>
