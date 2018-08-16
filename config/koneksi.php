@@ -4,7 +4,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "website-penelitian";
+$database = "website_penelitian";
 //create variable connectin
 $connection = mysqli_connect($hostname, $username, $password, $database);
 //checking connection
