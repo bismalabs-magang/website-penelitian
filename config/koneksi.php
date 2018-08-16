@@ -3,7 +3,7 @@
 //membuat deklarasi variable
 $hostname = "localhost";
 $username = "root";
-$password = "maulayyacyber17";
+$password = "";
 $database = "website_penelitian";
 //create variable connectin
 $connection = mysqli_connect($hostname, $username, $password, $database);
