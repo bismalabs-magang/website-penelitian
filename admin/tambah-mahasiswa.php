@@ -42,7 +42,17 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 										<div class="form-line">
 											<input type="text" name="nim" class="form-control" placeholder="Nim Mahasiswa" />
 										</div>
+									<div class="form-group">
+										<label>PRODI</label>
+										<div class="form-line">
+											<input type="text" name="prodi" class="form-control" placeholder="Prodi Mahasiswa" />
+										</div>
 									</div>
+									<div class="form-group">
+										<label>FAKULTAS</label>
+										<div class="form-line">
+											<input type="text" name="fakultas" class="form-control" placeholder="Fakultas Mahasiswa" />
+										</div>
 									<div class="form-group">
 										<label>PASSWORD</label>
 										<div class="form-line">
