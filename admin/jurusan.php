@@ -42,7 +42,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_jurusan ORDER BY id_jurusan ASC";
+										$query = "SELECT * FROM tbl_jurusan ORDER BY id_jurusan DESC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
