@@ -39,7 +39,7 @@ include("part/sidebar.php");
 							<div class="form-group">
 								<label>NAMA JURUSAN</label>
 								<div class="form-line">
-									<input type="hidden" name="jurusan" value="<?php echo $row['id_jurusan']; ?>">
+									<input type="hidden" name="id_jurusan" value="<?php echo $row['id_jurusan']; ?>">
 									<input type="text" name="nama" value="<?php echo $row['nama_jurusan']; ?>" class="form-control" placeholder="Nama Jurusan" />
 								</div>
 							</div>
