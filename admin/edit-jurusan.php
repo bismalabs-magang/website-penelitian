@@ -35,7 +35,7 @@ include("part/sidebar.php");
 					</div>
 					<div class="body">
 						
-						<form action="simpan-jurusan.php" method="POST">
+						<form action="update-jurusan.php" method="POST">
 							<div class="form-group">
 								<label>NAMA JURUSAN</label>
 								<div class="form-line">
