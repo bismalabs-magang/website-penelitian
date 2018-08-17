@@ -34,7 +34,6 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 							<table class="table table-bordered dataTable js-exportable">
 								<thead>
 								<tr>
-									<th scope="col">ID_JURUSAN</th>
 									<th scope="col">NAMA JURUSAN</th>
 									<th scope="col">AKSI</th>
 								</tr>
@@ -48,7 +47,6 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 										while($row = mysqli_fetch_array($hasil)) {
 									?>
 									<tr>
-										<td><?php echo $row["id_jurusan"] ?></td>
 										<td><?php echo $row["nama_jurusan"] ?></td>
 										<td style="text-align: center">
 											<a href="edit-jurusan.php?id=<?php echo $row["id_jurusan"] ?>" class="btn btn-success btn-sm">Edit</a>
