@@ -14,10 +14,10 @@ VALUES ('$nama', '$nim', '$password')";
 
 if ($connection->query($query) === TRUE) {
 
-    //echo "data berhasil disimpan";
-    header("location:mahasiswa.php");
+	//echo "data berhasil disimpan";
+	header("location:mahasiswa.php");
 
 }else{
 
-    echo "data gagal disimpan";
+	echo "data gagal disimpan";
 }

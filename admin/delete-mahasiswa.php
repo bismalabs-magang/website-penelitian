@@ -12,13 +12,13 @@ $id = $_GET['id'];
 $query = "DELETE FROM tbl_mahasiswa WHERE nim = '$id'";
 $result = mysqli_query($connection, $query);
 if ($connection->query($query) === TRUE) {
-    echo "Delete record  successfully";
-    echo "<br>";
-    echo "<button><a href='index.php'>Kembali</a></button>";
+	echo "Delete record  successfully";
+	echo "<br>";
+	echo "<button><a href='index.php'>Kembali</a></button>";
 } else {
-    echo "Error: " . $query . "<br>" . $connection->error;
-    echo "<br>";
-    echo "<button><a href='tambah-dosen.php'>Tambah Data Dosen</a></button>";
+	echo "Error: " . $query . "<br>" . $connection->error;
+	echo "<br>";
+	echo "<button><a href='tambah-dosen.php'>Tambah Data Dosen</a></button>";
 }
  ?>
 © 2018 GitHub, Inc.

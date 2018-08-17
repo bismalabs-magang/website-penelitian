@@ -22,11 +22,11 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 					<div class="card">
 						<div class="header">
 							<h2>
-								DATA MAHASISWA
+								DATA JURUSAN
 							</h2>
 							<div class="header-dropdown m-r--5">
 								<li class="dropdown">
-									<a href="tambah-mahasiswa.php" class="btn btn-success btn-md">TAMBAH MAHASISWA</a>
+									<a href="tambah-jurusan.php" class="btn btn-success btn-md">TAMBAH JURUSAN</a>
 								</li>
 							</div>
 						</div>
@@ -34,30 +34,26 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 							<table class="table table-bordered dataTable js-exportable">
 								<thead>
 								<tr>
-									<th scope="col">NIM</th>
-									<th scope="col">NAMA MAHASISWA</th>
-									<th scope="col">FAKULTAS</th>
-									<th scope="col">PRODI</th>
+									<th scope="col">ID_JURUSAN</th>
+									<th scope="col">NAMA JURUSAN</th>
 									<th scope="col">AKSI</th>
 								</tr>
 								</thead>
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_mahasiswa ORDER BY nim ASC";
+										$query = "SELECT * FROM tbl_jurusan ORDER BY id_jurusan ASC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
 									?>
 									<tr>
-										<td><?php echo $row["nim"] ?></td>
-										<td><?php echo $row["nama_mahasiswa"] ?></td>
-										<td><?php echo $row["id_fakultas"] ?></td>
-										<td><?php echo $row["id_prodi"] ?></td>
+										<td><?php echo $row["id_jurusan"] ?></td>
+										<td><?php echo $row["nama_jurusan"] ?></td>
 										<td style="text-align: center">
-											<a href="edit-mahasiswa.php?id=<?php echo $row["nim"] ?>" class="btn btn-success btn-sm">Edit</a>
+											<a href="edit-jurusan.php?id=<?php echo $row["id_jurusan"] ?>" class="btn btn-success btn-sm">Edit</a>
 
-											<a href="delete-mahasiswa.php?id=<?php echo $row["nim"] ?>" class="btn btn-danger btn-sm">Delete</a>
+											<a href="delete-jurusan.php?id=<?php echo $row["id_jurusan"] ?>" class="btn btn-danger btn-sm">Delete</a>
 										</td>
 									</tr>
 
