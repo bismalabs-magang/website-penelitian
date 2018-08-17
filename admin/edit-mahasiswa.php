@@ -21,48 +21,48 @@ include("part/sidebar.php");
 ?>
 <!-- start content -->
 <section class="content">
-  <div class="container-fluid">
-    <div class="row clearfix">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="header">
-            <h2>
-            EDIT DATA MAHASISWA
-            </h2>
-            <div class="header-dropdown m-r--5">
-              
-            </div>
-          </div>
-          <div class="body">
-            
-            <form action="update-mahasiswa.php" method="POST">
-              <div class="form-group">
-                <label>NAMA MAHASISWA</label>
-                <div class="form-line">
-                  <input type="hidden" name="nim" value="<?php echo $row['nim']; ?>">
-                  <input type="text" name="nama" value="<?php echo $row['nama_mahasiswa']; ?>" class="form-control" placeholder="Nama Mahasiswa" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label>PASSWORD</label>
-                <div class="form-line">
-                  <input type="password" name="password" class="form-control" placeholder="Password Mahasiswa" />
-                </div>
-              </div>
-              <button type="submit" class="btn bg-green waves-effect">
-              <i class="material-icons">save</i>
-              <span>SIMPAN</span>
-              </button>
-              <button type="reset" class="btn bg-orange waves-effect">
-              <i class="material-icons">repeat</i>
-              <span>RESET</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container-fluid">
+		<div class="row clearfix">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="header">
+						<h2>
+						EDIT DATA MAHASISWA
+						</h2>
+						<div class="header-dropdown m-r--5">
+							
+						</div>
+					</div>
+					<div class="body">
+						
+						<form action="update-mahasiswa.php" method="POST">
+							<div class="form-group">
+								<label>NAMA MAHASISWA</label>
+								<div class="form-line">
+									<input type="hidden" name="nim" value="<?php echo $row['nim']; ?>">
+									<input type="text" name="nama" value="<?php echo $row['nama_mahasiswa']; ?>" class="form-control" placeholder="Nama Mahasiswa" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label>PASSWORD</label>
+								<div class="form-line">
+									<input type="password" name="password" class="form-control" placeholder="Password Mahasiswa" />
+								</div>
+							</div>
+							<button type="submit" class="btn bg-green waves-effect">
+							<i class="material-icons">save</i>
+							<span>UPDATE</span>
+							</button>
+							<button type="reset" class="btn bg-orange waves-effect">
+							<i class="material-icons">repeat</i>
+							<span>RESET</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <!-- end content -->
 <?php
