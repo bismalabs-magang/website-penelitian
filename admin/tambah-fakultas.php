@@ -36,7 +36,8 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
                                         <div class="form-line">
                                             <input type="text" name="nama" class="form-control" placeholder="Nama Fakultas" />
                                         </div>
-                                    
+                                    </div>
+                                    <br></br> 
                                     <button type="submit" class="btn bg-green waves-effect">
                                     <i class="material-icons">save</i>
                                     <span>SIMPAN</span>
