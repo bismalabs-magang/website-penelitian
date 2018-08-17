@@ -44,6 +44,18 @@
                     </a>
                 </li>
                 <li>
+                    <a href="fakultas.php">
+                        <i class="material-icons">account_balance</i>
+                        <span>DATA FAKULTAS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="jurusan.php">
+                        <i class="material-icons">chrome_reader_mode</i>
+                        <span>DATA JURUSAN</span>
+                    </a>
+                </li>
+                <li>
                     <a href="logout.php">
                         <i class="material-icons">input</i>
                         <span>KELUAR</span>
