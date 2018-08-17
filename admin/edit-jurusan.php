@@ -27,7 +27,7 @@ include("part/sidebar.php");
 				<div class="card">
 					<div class="header">
 						<h2>
-						EDIT DATA MAHASISWA
+						EDIT DATA JURUSAN
 						</h2>
 						<div class="header-dropdown m-r--5">
 							
@@ -35,18 +35,12 @@ include("part/sidebar.php");
 					</div>
 					<div class="body">
 						
-						<form action="update-mahasiswa.php" method="POST">
+						<form action="simpan-jurusan.php" method="POST">
 							<div class="form-group">
-								<label>NAMA MAHASISWA</label>
+								<label>NAMA JURUSAN</label>
 								<div class="form-line">
-									<input type="hidden" name="nim" value="<?php echo $row['nim']; ?>">
-									<input type="text" name="nama" value="<?php echo $row['nama_mahasiswa']; ?>" class="form-control" placeholder="Nama Mahasiswa" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label>PASSWORD</label>
-								<div class="form-line">
-									<input type="password" name="password" class="form-control" placeholder="Password Mahasiswa" />
+									<input type="hidden" name="jurusan" value="<?php echo $row['id_jurusan']; ?>">
+									<input type="text" name="nama" value="<?php echo $row['nama_jurusan']; ?>" class="form-control" placeholder="Nama Jurusan" />
 								</div>
 							</div>
 							<button type="submit" class="btn bg-green waves-effect">
