@@ -7,9 +7,7 @@ $id = $_GET['id'];
 $query = "DELETE FROM tbl_jurusan WHERE id_jurusan = '$id'";
 $result = mysqli_query($connection, $query);
 if ($connection->query($query) === TRUE) {
-    echo "Delete record  successfully";
-    echo "<br>";
-    echo "<button><a href='jurusan.php'>Kembali</a></button>";
+    header("location:jurusan.php");
 } else {
     echo "Error: " . $query . "<br>" . $connection->error;
     echo "<br>";
