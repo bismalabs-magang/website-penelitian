@@ -34,21 +34,21 @@
 				<li>
 					<a href="mahasiswa.php">
 						<i class="material-icons">supervisor_account</i>
-						<span>PROFIL MAHASISWA</span>
+						<span>PROFIL DOSEN</span>
 					</a>
 				</li>
 
 				<li>
 					<a href="ajukan-judul.php">
 						<i class="material-icons">supervised_user_circle</i>
-						<span>AJUKAN JUDUL</span>
+						<span>PENELITIAN</span>
 					</a>
 				</li>
 				
 				<li>
 					<a href="dosen-pembimbing.php">
 						<i class="material-icons">supervised_user_circle</i>
-						<span>DOSEN PEMBIMBING</span>
+						<span>SKRIPSI MAHASISWA</span>
 					</a>
 				</li>
 

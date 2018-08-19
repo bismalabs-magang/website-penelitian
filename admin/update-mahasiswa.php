@@ -7,20 +7,20 @@ $nama       = $_POST['nama'];
 $password   = $_POST['password'];
 
 if ($password == "") {
-    $query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama' where nim = '$id'";
+	$query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama' where nim = '$id'";
 
 }else {
-    $password2  = md5($_POST['password']);
-    $query = "UPDATE tbl_mahasiswa SET nama_mahasiswa
+	$password2  = md5($_POST['password']);
+	$query = "UPDATE tbl_mahasiswa SET nama_mahasiswa
  = '$nama' ,password = '$password2' WHERE nim = '$id'";
 }
 
 
 if ($connection->query($query) === TRUE) {
-    header("location:mahasiswa.php");
+	header("location:mahasiswa.php");
 } else {
-    echo "Error: " . $query . "<br>" . $connection->error;
-    echo "<br>";
-    echo "<button><a href='tambah-dosen.php'>Tambah Data Mahasiswa</a></button>";
+	echo "Error: " . $query . "<br>" . $connection->error;
+	echo "<br>";
+	echo "<button><a href='tambah-dosen.php'>Tambah Data Mahasiswa</a></button>";
 }
  ?>
