@@ -27,7 +27,7 @@ include("part/sidebar.php");
 					</div>
 					<div class="body">
 						
-						<form action="simpan-penelitian.php" method="POST">
+						<form action="simpan-penelitian.php" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
 								<label>JUDUL PENELITIAN</label>
 								<div class="form-line">
@@ -36,10 +36,13 @@ include("part/sidebar.php");
 							</div>
 							<div class="form-group">
 								<label>FILE PENELITIAN</label>
-								<form action="upload.php" method="post" enctype="multipart/form-data">
-								<p>Pilih file: <input type="file" name="berkas" />
-									<input type="submit" name="upload" value="upload" /></p>	
-								</form>
+								<input type="file" name="file">
+					
+							</div>
+							<div class="form-group">
+								<label>DESKRPSI PENELITIAN</label>
+								<textarea class="form-control" rows="3" name="deskripsi" placeholder="Masukkan Deskripsi Penelitian"></textarea>
+					
 							</div>
 							<button type="submit" class="btn bg-green waves-effect">
 							<i class="material-icons">save</i>
