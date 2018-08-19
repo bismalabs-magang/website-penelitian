@@ -36,7 +36,6 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 								<tr>
 									<th scope="col">NIDN</th>
 									<th scope="col">JUDUL PENELITIAN</th>
-									<th scope="col">DESKRIPSI PENELITIAN</th>
 									<th scope="col">FILE PENELITIAN</th>
 									<th scope="col">AKSI</th>
 								</tr>
@@ -52,9 +51,10 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 									<tr>
 										<td><?php echo $row["nidn"] ?></td>
 										<td><?php echo $row["judul_penelitian"] ?></td>
-										<td><?php echo $row["deskripsi_penelitian"] ?></td>
 										<td><?php echo $row["file_penelitian"] ?></td>
 										<td style="text-align: center">
+											<a href="detail-peneitian.php?id=<?php echo $row["nidn"] ?>" class="bg-red">Detail Penelitian</a>
+
 											<a href="edit-peneitian.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
 
 											<a href="delete-penelitian.php?id=<?php echo $row["nidn"] ?>" class="btn btn-danger btn-sm">Delete</a>
