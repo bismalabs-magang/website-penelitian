@@ -45,7 +45,8 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_skripsi ORDER BY id_skripsi DESC";
+										$nim = $_SESSION['username'];
+										$query = "SELECT * FROM tbl_skripsi WHERE nim = '$nim' ORDER BY id_skripsi DESC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
