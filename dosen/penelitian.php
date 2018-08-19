@@ -43,7 +43,8 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_penelitian ORDER BY id_penelitian ASC";
+										$nidn = $_SESSION['username'];
+										$query = "SELECT * FROM tbl_penelitian WHERE nidn = '$nidn' ORDER BY id_penelitian DESC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
@@ -51,13 +52,13 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 									<tr>
 										<td><?php echo $row["nidn"] ?></td>
 										<td><?php echo $row["judul_penelitian"] ?></td>
-										<td><?php echo $row["file_penelitian"] ?></td>
+										<td><a href="../file/<?php echo $row["file_penelitian"] ?>"><?php echo $row["file_penelitian"] ?></a></td>
 										<td style="text-align: center">
-											<a href="detail-peneitian.php?id=<?php echo $row["nidn"] ?>" class="bg-red">Detail Penelitian</a>
+											<a href="detail-peneitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-primary btn-sm">Detail </a>
 
-											<a href="edit-peneitian.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
+											<a href="edit-peneitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-success btn-sm">Edit</a>
 
-											<a href="delete-penelitian.php?id=<?php echo $row["nidn"] ?>" class="btn btn-danger btn-sm">Delete</a>
+											<a href="delete-penelitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-danger btn-sm">Delete</a>
 										</td>
 									</tr>
 

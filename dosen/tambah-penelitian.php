@@ -27,45 +27,44 @@ include("part/sidebar.php");
 					</div>
 					<div class="body">
 						
-						<form action="simpan-penelitian.php" method="POST">
+						<form action="simpan-penelitian.php" method="POST" enctype="multipart/form-data">
 							<div class="form-group">
-								<label>NAMA PENELITIAN</label>
+								<label>JUDUL PENELITIAN</label>
 								<div class="form-line">
-									<input type="text" name="nama" class="form-control" placeholder="Nama Penelitian" />
+									<input type="text" name="nama" class="form-control" placeholder="judul penelitian" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label>NIM</label>
-								<div class="form-line">
-									<input type="text" name="nim" class="form-control" placeholder="Nim Mahasiswa" />
-								</div>
-								<div class="form-group">
-									<label>PASSWORD</label>
-									<div class="form-line">
-										<input type="password" name="password" class="form-control" placeholder="Password Mahasiswa" />
-									</div>
-								</div>
-								<button type="submit" class="btn bg-green waves-effect">
-								<i class="material-icons">save</i>
-								<span>SIMPAN</span>
-								</button>
-								<button type="reset" class="btn bg-orange waves-effect">
-								<i class="material-icons">repeat</i>
-								<span>RESET</span>
-								</button>
-							</form>
-						</div>
+								<label>FILE PENELITIAN</label>
+								<input type="file" name="file">
+					
+							</div>
+							<div class="form-group">
+								<label>DESKRPSI PENELITIAN</label>
+								<textarea class="form-control" rows="3" name="deskripsi" placeholder="Masukkan Deskripsi Penelitian"></textarea>
+					
+							</div>
+							<button type="submit" class="btn bg-green waves-effect">
+							<i class="material-icons">save</i>
+							<span>SIMPAN</span>
+							</button>
+							<button type="reset" class="btn bg-orange waves-effect">
+							<i class="material-icons">repeat</i>
+							<span>RESET</span>
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- end content -->
-	<?php
-	//include footer.php
-	include("part/footer.php");
-	?>
-	<?php }else{ ?>
-	<?php header("location:../login.php")  ?>
-	<?php } ?>
-	?>
+	</div>
+</section>
+<!-- end content -->
+<?php
+//include footer.php
+include("part/footer.php");
+?>
+<?php }else{ ?>
+<?php header("location:../login.php")  ?>
+<?php } ?>
+?>

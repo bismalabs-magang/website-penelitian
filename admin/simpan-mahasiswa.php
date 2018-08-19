@@ -20,4 +20,6 @@ if ($connection->query($query) === TRUE) {
 }else{
 
 	echo "data gagal disimpan";
+		echo "<br>";
+	echo "Error: " . $query . "<br>" . $connection->error;
 }

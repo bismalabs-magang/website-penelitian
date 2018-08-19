@@ -19,7 +19,7 @@ VALUES ('$nim','$judul1', '$deskripsi_judul1', '$judul2', '$deskripsi_judul2', '
 if ($connection->query($query) === TRUE) {
 
 	//echo "data berhasil disimpan";
-	header("location:index.php");
+	header("location:ajukan-judul.php");
 
 }else{
 
