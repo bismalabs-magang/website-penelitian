@@ -40,7 +40,7 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 									<div class="form-group">
 										<label>DESKRIPSI JUDUL 1</label>
 										<div class="form-line">
-											<input type="text" name="deskripsi_judul1" class="form-control" placeholder="Deskripsi Judul 1" />
+											<textarea name="deskripsi_judul1" class="form-control" placeholder="Deskripsi Judul 1"> </textarea>  
 										</div>
 									</div>
 
@@ -54,7 +54,7 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 									<div class="form-group">
 										<label>DESKRIPSI JUDUL 2</label>
 										<div class="form-line">
-											<input type="text" name="deskripsi_judul2" class="form-control" placeholder="Deskripsi Judul 2" />
+											<textarea  name="deskripsi_judul2" class="form-control" placeholder="Deskripsi Judul 2" > </textarea>
 										</div>
 									</div>
 
