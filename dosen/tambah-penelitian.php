@@ -29,43 +29,39 @@ include("part/sidebar.php");
 						
 						<form action="simpan-penelitian.php" method="POST">
 							<div class="form-group">
-								<label>NAMA PENELITIAN</label>
+								<label>JUDUL PENELITIAN</label>
 								<div class="form-line">
-									<input type="text" name="nama" class="form-control" placeholder="Nama Penelitian" />
+									<input type="text" name="nama" class="form-control" placeholder="judul penelitian" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label>NIM</label>
-								<div class="form-line">
-									<input type="text" name="nim" class="form-control" placeholder="Nim Mahasiswa" />
-								</div>
-								<div class="form-group">
-									<label>PASSWORD</label>
-									<div class="form-line">
-										<input type="password" name="password" class="form-control" placeholder="Password Mahasiswa" />
-									</div>
-								</div>
-								<button type="submit" class="btn bg-green waves-effect">
-								<i class="material-icons">save</i>
-								<span>SIMPAN</span>
-								</button>
-								<button type="reset" class="btn bg-orange waves-effect">
-								<i class="material-icons">repeat</i>
-								<span>RESET</span>
-								</button>
-							</form>
-						</div>
+								<label>FILE PENELITIAN</label>
+								<form action="upload.php" method="post" enctype="multipart/form-data">
+								<p>Pilih file: <input type="file" name="berkas" />
+									<input type="submit" name="upload" value="upload" /></p>	
+								</form>
+							</div>
+							<button type="submit" class="btn bg-green waves-effect">
+							<i class="material-icons">save</i>
+							<span>SIMPAN</span>
+							</button>
+							<button type="reset" class="btn bg-orange waves-effect">
+							<i class="material-icons">repeat</i>
+							<span>RESET</span>
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- end content -->
-	<?php
-	//include footer.php
-	include("part/footer.php");
-	?>
-	<?php }else{ ?>
-	<?php header("location:../login.php")  ?>
-	<?php } ?>
-	?>
+	</div>
+</section>
+<!-- end content -->
+<?php
+//include footer.php
+include("part/footer.php");
+?>
+<?php }else{ ?>
+<?php header("location:../login.php")  ?>
+<?php } ?>
+?>

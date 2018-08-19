@@ -43,7 +43,8 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_penelitian ORDER BY id_penelitian ASC";
+										$nidn = $_SESSION['username'];
+										$query = "SELECT * FROM tbl_penelitian WHERE nidn = '$nidn' ORDER BY id_penelitian DESC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
