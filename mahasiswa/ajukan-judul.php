@@ -40,11 +40,8 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 
 									<th scope="col">STATUS JUDUL1</th>
 									<th scope="col">STATUS JUDUL2</th>
-									<th scope="col">AKSI</th>
-
-									<th scope="col" style="text-align: center;">STATUS JUDUL1</th>
-									<th scope="col">STATUS JUDUL2</th>
 									<th scope="col" style="width: 20%">AKSI</th>
+
 
 								</tr>
 								</thead>
