@@ -22,7 +22,7 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 					<div class="card">
 						<div class="header">
 							<h2>
-								DATA MAHASISWA
+								DATA PENELITIAN
 							</h2>
 							<div class="header-dropdown m-r--5">
 								<li class="dropdown">
@@ -55,9 +55,9 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 										<td><?php echo $row["deskripsi_penelitian"] ?></td>
 										<td><?php echo $row["file_penelitian"] ?></td>
 										<td style="text-align: center">
-											<a href="edit-peneitian.php?id=<?php echo $row["nim"] ?>" class="btn btn-success btn-sm">Edit</a>
+											<a href="edit-peneitian.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
 
-											<a href="delete-penelitian.php?id=<?php echo $row["nim"] ?>" class="btn btn-danger btn-sm">Delete</a>
+											<a href="delete-penelitian.php?id=<?php echo $row["nidn"] ?>" class="btn btn-danger btn-sm">Delete</a>
 										</td>
 									</tr>
 
