@@ -37,8 +37,8 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 									<th scope="col">NIM</th>
 									<th scope="col">JUDUL1</th>
 									<th scope="col">JUDUL2</th>
-									<th scope="col">STATUS_JUDUL1</th>
-									<th scope="col">STATUS_JUDUL2</th>
+									<th scope="col">STATUS JUDUL1</th>
+									<th scope="col">STATUS JUDUL2</th>
 									<th scope="col">AKSI</th>
 								</tr>
 								</thead>
