@@ -15,7 +15,26 @@ if($_SESSION['level'] == "dosen" AND $_SESSION['username'] == TRUE) {
 	?>
 
 	<!-- start content -->
+	<section class="content">
+		<div class="container-fluid">
+			<div class="row clearfix">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="header">
+							<h2>
+								DASHBOARD
+							</h2>
+							<div class="header-dropdown m-r--5">
 
+							</div>
+						</div>
+						<div class="body">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- end content -->
 
 	<?php

@@ -21,8 +21,8 @@ $rs_admin = mysqli_num_rows($query_admin);
 //kondisi jika data diatas 0
 if ($rs_admin  > 0){
 
-	$_SESSION['username'] 	= $username;
-	$_SESSION['level'] 		= "admin";
+	$_SESSION['username']   = $username;
+	$_SESSION['level']      = "admin";
 
 	//redirect
 	header("location:admin/index.php");
@@ -38,8 +38,8 @@ if ($rs_admin  > 0){
 	//kondisi jika data diatas 0
 	if ($rs_dosen  > 0){
 
-		$_SESSION['username'] 	= $username;
-		$_SESSION['level'] 		= "dosen";
+		$_SESSION['username']   = $username;
+		$_SESSION['level']      = "dosen";
 
 		//redirect
 		header("location:dosen/index.php");
@@ -55,8 +55,8 @@ if ($rs_admin  > 0){
 		//kondisi jika data diatas 0
 		if ($rs_mhs  > 0){
 
-			$_SESSION['username'] 	= $username;
-			$_SESSION['level'] 		= "mahasiswa";
+			$_SESSION['username']   = $username;
+			$_SESSION['level']      = "mahasiswa";
 
 			//redirect
 			header("location:mahasiswa/index.php");
@@ -64,11 +64,11 @@ if ($rs_admin  > 0){
 		}else{
 
 			$error = '<div class="alert bg-red">
-                          <b>Username</b> atau <b>Password</b> Anda salah.
-                      </div>';
+						  <b>Username</b> atau <b>Password</b> Anda salah.
+					  </div>';
 			include('login.php');
 
-		}		
+		}       
 
 	}
 
