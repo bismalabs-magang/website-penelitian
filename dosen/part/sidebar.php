@@ -32,14 +32,14 @@
 					</a>
 				</li>
 				<li>
-					<a href="mahasiswa.php">
+					<a href="dosen.php">
 						<i class="material-icons">person</i>
 						<span>PROFIL DOSEN</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="ajukan-judul.php">
+					<a href="penelitian.php">
 						<i class="material-icons">work</i>
 						<span>PENELITIAN</span>
 					</a>
