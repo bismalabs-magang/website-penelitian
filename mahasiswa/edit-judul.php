@@ -45,7 +45,7 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 
 									<label>DESKRIPSI JUDUL SKRIPSI 1</label>
 										<div class="form-line">
-											<textarea class="form-control" name="deskripsi_judul1" value="<?php echo $row['deskripsi_judul1']; ?>" " placeholder="deskripsi judul1"> </textarea> 	
+											<textarea class="form-control" name="deskripsi_judul1"  placeholder="deskripsi judul1"> <?php echo $row['deskripsi_judul1']; ?></textarea> 	
 										</div>
 										
 									
@@ -57,7 +57,7 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 
 									<label>DESKRIPSI JUDUL SKRIPSI 2</label>
 									<div class="form-line">
-										<textarea class="form-control" name="deskripsi_judul2" value="<?php echo $row['deskripsi_judul2']; ?>" " placeholder="deskripsi_judul2"> </textarea> 
+										<textarea class="form-control" name="deskripsi_judul2" placeholder="deskripsi_judul2"> <?php echo $row['deskripsi_judul2']; ?> </textarea> 
 									</div>
 								</div>
 
