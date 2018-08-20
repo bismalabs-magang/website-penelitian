@@ -40,6 +40,8 @@ include("part/sidebar.php");
 								<div class="form-line">
 									<input type="text" name="nim" class="form-control" placeholder="Nim Mahasiswa" />
 								</div>
+							</div>
+							
 								<div class="form-group">
 									<label>PASSWORD</label>
 									<div class="form-line">
@@ -89,7 +91,7 @@ include("part/sidebar.php");
 						</select>
 									</div>
 								</div>
-								
+
 								<button type="submit" class="btn bg-green waves-effect">
 								<i class="material-icons">save</i>
 								<span>SIMPAN</span>
