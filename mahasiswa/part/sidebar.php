@@ -32,7 +32,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="mahasiswa.php">
+					<a href="profil-mahasiswa.php">
 						<i class="material-icons">supervisor_account</i>
 						<span>PROFIL MAHASISWA</span>
 					</a>

@@ -63,7 +63,7 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 
 							<button type="submit" class="btn bg-green waves-effect">
 									<i class="material-icons">save</i>
-									<span>EDIT</span>
+									<span>UPDATE</span>
 									</button>
 
 									<button type="reset" class="btn bg-orange waves-effect">
