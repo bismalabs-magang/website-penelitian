@@ -34,6 +34,7 @@ include("part/sidebar.php");
 									<input type="text" name="nama" class="form-control" placeholder="Nama Mahasiswa" />
 								</div>
 							</div>
+							
 							<div class="form-group">
 								<label>NIM</label>
 								<div class="form-line">
