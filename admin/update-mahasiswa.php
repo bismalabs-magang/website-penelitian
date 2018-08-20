@@ -6,15 +6,15 @@ $id         = $_POST['nim'];
 $nama       = $_POST['nama'];
 $password   = $_POST['password'];
 $fakultas	= $_POST['fakultas'];
-$prodi		= $_POST['prodi'];
+$jurusan		= $_POST['jurusan'];
 
 if ($password == "") {
-	$query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama', id_fakultas = '$fakultas', id_prodi = '$prodi' where nim = '$id'";
+	$query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama', id_fakultas = '$fakultas', id_jurusan = '$jurusan' where nim = '$id'";
 
 }else {
 	$password2  = md5($_POST['password']);
 	$query = "UPDATE tbl_mahasiswa SET nama_mahasiswa
- = '$nama', 'id_fakultas' = '$fakultas', 'id_prodi' = '$prodi' password = '$password2' WHERE nim = '$id'";
+ = '$nama', 'id_fakultas' = '$fakultas', 'id_jurusan' = '$jurusan' password = '$password2' WHERE nim = '$id'";
 }
 
 
