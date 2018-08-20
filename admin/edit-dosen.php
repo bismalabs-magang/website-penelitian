@@ -1,4 +1,4 @@
-<?php
+ <?php
 $id = $_GET['id'];
 //include koneksi
 include_once('../config/koneksi.php');
