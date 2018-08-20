@@ -18,6 +18,6 @@ if ($connection->query($query) === TRUE) {
 } else {
 	echo "Error: " . $query . "<br>" . $connection->error;
 	echo "<br>";
-	echo "<button><a href='tambah-dosen.php'>Tambah Data Dosen</a></button>";
+	echo "<button><a href='tambah-mahasiswa.php'>Tambah Data Mahasiswa</a></button>";
 }
  ?>
