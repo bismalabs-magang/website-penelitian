@@ -43,7 +43,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_dosen ORDER BY nama_dosen ASC";
+										$query = "SELECT * FROM tbl_dosen as a JOIN tbl_fakultas as b ON a.id_fakultas = b.id_fakultas ORDER BY a.nama_dosen ASC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
@@ -51,7 +51,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 									<tr>
 										<td><?php echo $row["nidn"] ?></td>
 										<td><?php echo $row["nama_dosen"] ?></td>
-										<td><?php echo $row["id_fakultas"] ?></td>
+										<td><?php echo $row["nama_fakultas"] ?></td>
 										<td style="text-align: center">
 											<a href="edit-dosen.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
 

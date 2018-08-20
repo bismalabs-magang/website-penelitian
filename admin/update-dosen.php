@@ -5,14 +5,15 @@ include_once('../config/koneksi.php');
 $id     = $_POST['nidn'];
 $nama   = $_POST['nama'];
 $password  = $_POST['password'];
+$fakultas	= $_POST['fakultas'];
 
 if ($password == "") {
-	$query = "UPDATE tbl_dosen set nama_dosen = '$nama' where nidn = '$id'";
+	$query = "UPDATE tbl_dosen set nama_dosen = '$nama', id_fakultas = '$fakultas' where nidn = '$id'";
 
 }else {
 	$password2  = md5($_POST['password']);
 	$query = "UPDATE tbl_dosen SET nama_dosen
- = '$nama' ,password = '$password2' WHERE nidn = '$id'";
+ = '$nama', 'id_fakultas' = '$fakultas' ,password = '$password2' WHERE nidn = '$id'";
 }
 
 

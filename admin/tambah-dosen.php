@@ -1,6 +1,7 @@
 <?php
 //check level
 session_start();
+
 if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 	?>
 
@@ -43,10 +44,30 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 											<input type="text" name="nidn" class="form-control" placeholder="NIDN Dosen" />
 										</div>
 									</div>
+
 									<div class="form-group">
 										<label>PASSWORD</label>
 										<div class="form-line">
 											<input type="password" name="password" class="form-control" placeholder="Password Dosen" />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label>PILIH FAKULTAS</label>
+										<div class="form-line">
+									<select class="form-control show-tick" name="fakultas" required>
+                                        <option value="">-- PILIH FAKULTAS --</option>
+							<?php
+								include('../config/koneksi.php');
+								$query = "SELECT * FROM tbl_fakultas ORDER BY nama_fakultas ASC";
+								$hasil = mysqli_query($connection, $query);
+
+								while($row = mysqli_fetch_array($hasil)) {
+							?>
+                                        <option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
+
+							<?php } ?>
+							</select>
 										</div>
 									</div>
 
