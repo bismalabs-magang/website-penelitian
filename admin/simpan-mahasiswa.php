@@ -14,7 +14,7 @@ $fakultas	= $_POST['fakultas'];
 
 
 $query = "INSERT INTO tbl_mahasiswa (nim, nama_mahasiswa, id_fakultas, id_jurusan, password )
-VALUES ('$nama', '$nim', '$password', '$fakultas', '$jurusan')";
+VALUES ('$nim', '$nama', '$id_fakultas', '$id_jurusan', '$password')";
 
 if ($connection->query($query) === TRUE) {
 
