@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 	?>
-
+	
 	<?php
 	//include header.php
 	include("part/header.php");

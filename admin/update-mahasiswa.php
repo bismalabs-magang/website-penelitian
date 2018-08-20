@@ -5,14 +5,16 @@ include_once('../config/koneksi.php');
 $id         = $_POST['nim'];
 $nama       = $_POST['nama'];
 $password   = $_POST['password'];
+$fakultas	= $_POST['fakultas'];
+$prodi		= $_POST['prodi'];
 
 if ($password == "") {
-	$query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama' where nim = '$id'";
+	$query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama', id_fakultas = '$fakultas', id_prodi = '$prodi' where nim = '$id'";
 
 }else {
 	$password2  = md5($_POST['password']);
 	$query = "UPDATE tbl_mahasiswa SET nama_mahasiswa
- = '$nama' ,password = '$password2' WHERE nim = '$id'";
+ = '$nama', 'id_fakultas' = '$fakultas', 'id_prodi' = '$prodi' password = '$password2' WHERE nim = '$id'";
 }
 
 
@@ -21,6 +23,6 @@ if ($connection->query($query) === TRUE) {
 } else {
 	echo "Error: " . $query . "<br>" . $connection->error;
 	echo "<br>";
-	echo "<button><a href='tambah-dosen.php'>Tambah Data Mahasiswa</a></button>";
+	echo "<button><a href='tambah-mahasiswa.php'>Tambah Data Mahasiswa</a></button>";
 }
  ?>

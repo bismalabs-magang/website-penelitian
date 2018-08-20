@@ -16,7 +16,6 @@ if ($password == "") {
  = '$nama', 'id_fakultas' = '$fakultas' ,password = '$password2' WHERE nidn = '$id'";
 }
 
-
 if ($connection->query($query) === TRUE) {
 	header("location:dosen.php");
 } else {

@@ -43,6 +43,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
                       <input type="text" name="nama" value="<?php echo $row['nama_dosen']; ?>" class="form-control" placeholder="Nama Dosen" />
                     </div>
                   </div>
+                  
                   <div class="form-group">
                     <label>PASSWORD</label>
                     <div class="form-line">
