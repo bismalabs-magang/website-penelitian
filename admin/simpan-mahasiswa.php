@@ -7,16 +7,21 @@ include('../config/koneksi.php');
 $nama       = $_POST['nama'];
 $nim        = $_POST['nim'];
 $password   = MD5($_POST['password']);
-$prodi	= $_POST['prodi'];
+$jurusan	= $_POST['jurusan'];
 $fakultas	= $_POST['fakultas'];
 
 //query
+
 
 $query = "INSERT INTO tbl_mahasiswa (nim, nama_mahasiswa, id_fakultas, id_jurusan, password )
 VALUES ('$nama', '$nim', '$password', '$fakultas', '$jurusan')";
 
 $query = "INSERT INTO tbl_mahasiswa (nim, nama_mahasiswa, id_fakultas, id_prodi, password )
 VALUES ('$nama', '$nim', '$password', '$prodi', '$fakultas')";
+
+$query = "INSERT INTO tbl_mahasiswa (nim, nama_mahasiswa, id_fakultas, id_jurusan, password )
+VALUES ('$nama', '$nim', '$password', '$jurusan', '$fakultas')";
+
 
 if ($connection->query($query) === TRUE) {
 

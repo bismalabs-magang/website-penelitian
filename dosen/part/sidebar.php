@@ -32,7 +32,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="dosen.php">
+					<a href="profil.php">
 						<i class="material-icons">person</i>
 						<span>PROFIL DOSEN</span>
 					</a>
