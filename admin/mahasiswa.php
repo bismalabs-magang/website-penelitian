@@ -37,7 +37,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 									<th scope="col">NIM</th>
 									<th scope="col">NAMA MAHASISWA</th>
 									<th scope="col">FAKULTAS</th>
-									<th scope="col">PRODI</th>
+									<th scope="col">JURUSAN</th>
 									<th scope="col">AKSI</th>
 								</tr>
 								</thead>
