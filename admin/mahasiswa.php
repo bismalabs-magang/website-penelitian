@@ -44,7 +44,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_mahasiswa ORDER BY nim ASC";
+										$query = "SELECT * FROM tbl_mahasiswa as a JOIN tbl_fakultas as b JOIN tbl_jurusan as c ON a.id_fakultas = b.id_fakultas AND a.id_prodi = c.id_jurusan ORDER BY nim DESC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
@@ -52,8 +52,8 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 									<tr>
 										<td><?php echo $row["nim"] ?></td>
 										<td><?php echo $row["nama_mahasiswa"] ?></td>
-										<td><?php echo $row["id_fakultas"] ?></td>
-										<td><?php echo $row["id_prodi"] ?></td>
+										<td><?php echo $row["nama_fakultas"] ?></td>
+										<td><?php echo $row["nama_jurusan"] ?></td>
 										<td style="text-align: center">
 											<a href="edit-mahasiswa.php?id=<?php echo $row["nim"] ?>" class="btn btn-success btn-sm">Edit</a>
 
