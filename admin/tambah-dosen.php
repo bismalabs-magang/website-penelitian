@@ -13,8 +13,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 	<?php
 	//include sidebar.php
 	include("part/sidebar.php");
-	?
-	>
+	?>
 
 	<!-- start content -->
 	<section class="content">
@@ -57,7 +56,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 										<label>PILIH FAKULTAS</label>
 										<div class="form-line">
 									<select class="form-control show-tick" name="fakultas" required>
-                                        <option value="">-- PILIH FAKULTAS --</option>
+										<option value="">-- PILIH FAKULTAS --</option>
 							<?php
 								include('../config/koneksi.php');
 								$query = "SELECT * FROM tbl_fakultas ORDER BY nama_fakultas ASC";
@@ -65,7 +64,7 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 
 								while($row = mysqli_fetch_array($hasil)) {
 							?>
-                                        <option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
+										<option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
 
 							<?php } ?>
 							</select>
