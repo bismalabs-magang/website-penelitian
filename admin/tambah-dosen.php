@@ -13,7 +13,8 @@ if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 	<?php
 	//include sidebar.php
 	include("part/sidebar.php");
-	?>
+	?
+	>
 
 	<!-- start content -->
 	<section class="content">
