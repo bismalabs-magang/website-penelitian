@@ -6,13 +6,13 @@ Development Website Penelitian
 	password : admin
 
 #### DOSEN
-	nidn     : 168559223
-	password : 1234
+	nidn     : 1402040424
+	password : angga
 
 #### MAHASISWA
 <<<<<<< HEAD
-    nim      : 1601011254
-    password : 1234   
+	nim      : 1601011254
+	password : 1234   
 =======
 	nim      : 1601011254
 	password : 1234
