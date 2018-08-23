@@ -37,12 +37,12 @@ include("part/sidebar.php");
 							<div class="form-group">
 								<label>FILE PENELITIAN</label>
 								<input type="file" name="file">
-					
+								
 							</div>
 							<div class="form-group">
 								<label>DESKRPSI PENELITIAN</label>
 								<textarea class="form-control" rows="3" name="deskripsi" placeholder="Masukkan Deskripsi Penelitian"></textarea>
-					
+								
 							</div>
 							<button type="submit" class="btn bg-green waves-effect">
 							<i class="material-icons">save</i>

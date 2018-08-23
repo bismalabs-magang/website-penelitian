@@ -5,8 +5,8 @@ include_once('../config/koneksi.php');
 $id         = $_POST['nim'];
 $nama       = $_POST['nama'];
 $password   = $_POST['password'];
-$fakultas	= $_POST['fakultas'];
-$jurusan		= $_POST['jurusan'];
+$fakultas   = $_POST['fakultas'];
+$jurusan        = $_POST['jurusan'];
 
 if ($password == "") {
 	$query = "UPDATE tbl_mahasiswa set nama_mahasiswa = '$nama', id_fakultas = '$fakultas', id_jurusan = '$jurusan' where nim = '$id'";
