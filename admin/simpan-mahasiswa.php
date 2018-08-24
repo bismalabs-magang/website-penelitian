@@ -7,8 +7,8 @@ include('../config/koneksi.php');
 $nama       = $_POST['nama'];
 $nim        = $_POST['nim'];
 $password   = MD5($_POST['password']);
-$jurusan	= $_POST['jurusan'];
-$fakultas	= $_POST['fakultas'];
+$jurusan    = $_POST['jurusan'];
+$fakultas   = $_POST['fakultas'];
 
 //query
 
@@ -18,12 +18,12 @@ VALUES ('$nim', '$nama', '$fakultas', '$jurusan', '$password')";
 
 if ($connection->query($query) === TRUE) {
 
-	//echo "data berhasil disimpan";
-	header("location:mahasiswa.php");
+    //echo "data berhasil disimpan";
+    header("location:mahasiswa.php");
 
 }else{
 
-	echo "data gagal disimpan";
-		echo "<br>";
-	echo "Error: " . $query . "<br>" . $connection->error;
+    echo "data gagal disimpan";
+        echo "<br>";
+    echo "Error: " . $query . "<br>" . $connection->error;
 }

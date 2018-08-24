@@ -35,12 +35,12 @@ include("part/sidebar.php");
                     </div>
                     <div class="body">
                         
-                        <form action="update-penelitian.php" method="POST">
+                        <form action="update-penelitian.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>JUDUL PENELITIAN</label>
                                 <div class="form-line">
-                                    <input type="hidden" name="judul_penelitian" value="<?php echo $row['id_penelitian']; ?>">
-                                    <input type="text" name="nama" value="<?php echo $row['judul_penelitian']; ?>" class="form-control" placeholder="Nama Penelitian" />
+                                    <input type="hidden" name="id_penelitian" value="<?php echo $row['id_penelitian']; ?>">
+                                    <input type="text" name="judul_penelitian" value="<?php echo $row['judul_penelitian']; ?>" class="form-control" placeholder="Nama Penelitian" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -50,7 +50,7 @@ include("part/sidebar.php");
                             </div>
                             <div class="form-group">
                                 <label>DESKRPSI PENELITIAN</label>
-                                <textarea class="form-control" rows="3" name="deskripsi" placeholder="Masukkan Deskripsi Penelitian"></textarea>
+                                <textarea class="form-control" rows="3" name="deskripsi_penelitian" placeholder="Masukkan Deskripsi Penelitian"><?php echo $row['deskripsi_penelitian']; ?></textarea>
                             </div>
                             <button type="submit" class="btn bg-green waves-effect">
                             <i class="material-icons">save</i>
