@@ -8,19 +8,19 @@ $password  = $_POST['password'];
 $fakultas   = $_POST['fakultas'];
 
 if ($password == "") {
-    $query = "UPDATE tbl_dosen set nama_dosen = '$nama', id_fakultas = '$fakultas' where nidn = '$id'";
+	$query = "UPDATE tbl_dosen set nama_dosen = '$nama', id_fakultas = '$fakultas' where nidn = '$id'";
 
 }else {
-    $password2  = md5($_POST['password']);
-    $query = "UPDATE tbl_dosen SET nama_dosen
+	$password2  = md5($_POST['password']);
+	$query = "UPDATE tbl_dosen SET nama_dosen
  = '$nama', 'id_fakultas' = '$fakultas' ,password = '$password2' WHERE nidn = '$id'";
 }
 
 if ($connection->query($query) === TRUE) {
-    header("location:dosen.php");
+	header("location:dosen.php");
 } else {
-    echo "Error: " . $query . "<br>" . $connection->error;
-    echo "<br>";
-    echo "<button><a href='tambah-dosen.php'>Tambah Data Dosen</a></button>";
+	echo "Error: " . $query . "<br>" . $connection->error;
+	echo "<br>";
+	echo "<button><a href='tambah-dosen.php'>Tambah Data Dosen</a></button>";
 }
  ?>
