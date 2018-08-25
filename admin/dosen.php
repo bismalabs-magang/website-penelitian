@@ -1,7 +1,7 @@
 <?php
 //check level
 session_start();
-if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
+if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
     ?>
     
     <?php

@@ -10,10 +10,10 @@ $query = "UPDATE tbl_fakultas SET nama_fakultas = '$nama'  WHERE id_fakultas = '
 
 
 if ($connection->query($query) === TRUE) {
-	header("location:fakultas.php");
+    header("location:fakultas.php");
 } else {
-	echo "Error: " . $query . "<br>" . $connection->error;
-	echo "<br>";
-	echo "<button><a href='tambah-fakultas.php'>Tambah Data Fakultas</a></button>";
+    echo "Error: " . $query . "<br>" . $connection->error;
+    echo "<br>";
+    echo "<button><a href='tambah-fakultas.php'>Tambah Data Fakultas</a></button>";
 }
  ?>

@@ -7,7 +7,7 @@ $result = mysqli_query($connection, $sql);
 $row = mysqli_fetch_array($result); 
 
 session_start();
-if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
+if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
  ?>
 
  <?php

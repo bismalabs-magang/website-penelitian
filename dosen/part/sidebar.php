@@ -38,7 +38,7 @@
 				</li>
 				
 				<li>
-					<a href="dosen-pembimbing.php">
+					<a href="skripsi-mahasiswa.php">
 						<i class="material-icons">local_library</i>
 						<span>SKRIPSI MAHASISWA</span>
 					</a>

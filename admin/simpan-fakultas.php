@@ -12,10 +12,10 @@ VALUES ('$nama')";
 
 if ($connection->query($query) === TRUE) {
 
-	//echo "data berhasil disimpan";
-	header("location:fakultas.php");
+    //echo "data berhasil disimpan";
+    header("location:fakultas.php");
 
 }else{
 
-	echo "data gagal disimpan";
+    echo "data gagal disimpan";
 }
