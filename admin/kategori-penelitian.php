@@ -1,7 +1,7 @@
 <?php
 //check level
 session_start();
-if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
+if(isset($_SESSION['level']) == "admin" AND $_SESSION['username']) {
 	?>
 
 	<?php
@@ -22,34 +22,39 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 					<div class="card">
 						<div class="header">
 							<h2>
-								PROFIL DATA MAHASISWA
+								DATA KATEGORI PENELITIAN
 							</h2>
+							<div class="header-dropdown m-r--5">
+								<li class="dropdown">
+									<a href="tambah-kategori-penelitian.php" class="btn btn-success btn-md">TAMBAH KATEGORI PENELITIAN</a>
+								</li>
+							</div>
 						</div>
 						<div class="body">
 							<table class="table table-bordered dataTable js-exportable">
 								<thead>
 								<tr>
-									<th scope="col">NIM</th>
-									<th scope="col">NAMA MAHASISWA</th>
-									<th scope="col">FAKULTAS</th>
-									<th scope="col">PRODI</th>
-									
+									<th scope="col">NAMA KATEGORI</th>
+									<th scope="col">AKSI</th>
 								</tr>
 								</thead>
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_mahasiswa as a JOIN tbl_fakultas as b JOIN tbl_jurusan as c ON a.id_fakultas = b.id_fakultas AND a.id_jurusan = c.id_jurusan ORDER BY a.nim DESC";
+										$query = "SELECT * FROM tbl_kategori_penelitian ORDER BY id_kategori DESC";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {
 									?>
 									<tr>
-										<td><?php echo $row["nim"] ?></td>
-										<td><?php echo $row["nama_mahasiswa"] ?></td>
-										<td><?php echo $row["nama_fakultas"] ?></td>
-										<td><?php echo $row["nama_jurusan"] ?></td>
+										<td><?php echo $row["nama_kategori"] ?></td>
+										<td style="text-align: center">
+											<a href="edit-kategori.php?id=<?php echo $row["id_kategori"] ?>" class="btn btn-success btn-sm">Edit</a>
+
+											<a href="edit-kategori.php?id=<?php echo $row["id_kategori"] ?>" class="btn btn-danger btn-sm">Delete</a>
+										</td>
 									</tr>
+
 								<?php } ?>
 
 								</tbody>
@@ -68,5 +73,5 @@ if(isset($_SESSION['level']) == "mahasiswa" AND $_SESSION['username']) {
 	?>
 
 <?php }else{ ?>
-	<?php header("location:../login.php") ?>
+	<?php header("location:../login.php")  ?>
 <?php } ?>

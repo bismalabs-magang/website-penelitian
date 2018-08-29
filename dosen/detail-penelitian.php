@@ -31,7 +31,7 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 									<?php
 										include('../config/koneksi.php');
 										$id = $_GET['id'];
-										$query = "SELECT * FROM tbl_penelitian WHERE id_penelitian = '$id' ORDER BY file_penelitian DESC";
+										$query = "SELECT * FROM tbl_penelitian as a join tbl_kategori_penelitian WHERE id_penelitian = '$id' ORDER BY file_penelitian DESC";
 										$hasil = mysqli_query($connection, $query);
 										while($row = mysqli_fetch_array($hasil)) {
 									?>
@@ -49,6 +49,10 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 											<span>DOWNLOAD</span>
 											</a>
 										</td>
+									</tr>
+									<tr>
+										<td><b>KATEGORI PENELITIAN</b></td>
+										<td><?php echo $row["nama_kategori"] ?></td>
 									</tr>
 
 								<?php } ?>

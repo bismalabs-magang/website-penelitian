@@ -15,11 +15,11 @@ VALUES ('$nama', '$nidn', '$password', '$fakultas')";
 
 if ($connection->query($query) === TRUE) {
 
-    //echo "data berhasil disimpan";
-    header("location:dosen.php");
+	//echo "data berhasil disimpan";
+	header("location:dosen.php");
 
 
 }else{
 
-    echo "data gagal disimpan";
+	echo "data gagal disimpan";
 }

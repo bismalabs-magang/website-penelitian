@@ -21,55 +21,55 @@ $rs_admin = mysqli_num_rows($query_admin);
 //kondisi jika data diatas 0
 if ($rs_admin  > 0){
 
-    $_SESSION['username']   = $username;
-    $_SESSION['level']      = "admin";
+	$_SESSION['username']   = $username;
+	$_SESSION['level']      = "admin";
 
-    //redirect
-    header("location:admin/index.php");
+	//redirect
+	header("location:admin/index.php");
 
 }else{
 
-    //query data dosen
-    $query_dosen = mysqli_query($connection, "SELECT * FROM tbl_dosen WHERE nidn = '$username' AND password = '$password'");
+	//query data dosen
+	$query_dosen = mysqli_query($connection, "SELECT * FROM tbl_dosen WHERE nidn = '$username' AND password = '$password'");
 
-    //cek jumlah data dosen
-    $rs_dosen = mysqli_num_rows($query_dosen);
+	//cek jumlah data dosen
+	$rs_dosen = mysqli_num_rows($query_dosen);
 
-    //kondisi jika data diatas 0
-    if ($rs_dosen  > 0){
+	//kondisi jika data diatas 0
+	if ($rs_dosen  > 0){
 
-        $_SESSION['username']   = $username;
-        $_SESSION['level']      = "dosen";
+		$_SESSION['username']   = $username;
+		$_SESSION['level']      = "dosen";
 
-        //redirect
-        header("location:dosen/index.php");
+		//redirect
+		header("location:dosen/index.php");
 
-    }else{
+	}else{
 
-        //query data mahasiswa
-        $query_mhs = mysqli_query($connection, "SELECT * FROM tbl_mahasiswa WHERE nim = '$username' AND password = '$password'");
+		//query data mahasiswa
+		$query_mhs = mysqli_query($connection, "SELECT * FROM tbl_mahasiswa WHERE nim = '$username' AND password = '$password'");
 
-        //cek jumlah data mahasiswa
-        $rs_mhs = mysqli_num_rows($query_mhs);
+		//cek jumlah data mahasiswa
+		$rs_mhs = mysqli_num_rows($query_mhs);
 
-        //kondisi jika data diatas 0
-        if ($rs_mhs  > 0){
+		//kondisi jika data diatas 0
+		if ($rs_mhs  > 0){
 
-            $_SESSION['username']   = $username;
-            $_SESSION['level']      = "mahasiswa";
+			$_SESSION['username']   = $username;
+			$_SESSION['level']      = "mahasiswa";
 
-            //redirect
-            header("location:mahasiswa/index.php");
+			//redirect
+			header("location:mahasiswa/index.php");
 
-        }else{
+		}else{
 
-            $error = '<div class="alert bg-red">
-                          <b>Username</b> atau <b>Password</b> Anda salah.
-                      </div>';
-            include('login.php');
+			$error = '<div class="alert bg-red">
+						  <b>Username</b> atau <b>Password</b> Anda salah.
+					  </div>';
+			include('login.php');
 
-        }       
+		}       
 
-    }
+	}
 
 }

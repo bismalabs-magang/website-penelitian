@@ -36,7 +36,7 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_dosen ORDER BY id_dosen ASC";
+										$query = "SELECT * FROM tbl_dosen ORDER BY id_dosen";
 										$hasil = mysqli_query($connection, $query);
 
 										while($row = mysqli_fetch_array($hasil)) {

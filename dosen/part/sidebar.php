@@ -29,7 +29,6 @@
 						<span>PROFIL DOSEN</span>
 					</a>
 				</li>
-
 				<li>
 					<a href="penelitian.php">
 						<i class="material-icons">work</i>
@@ -43,7 +42,6 @@
 						<span>SKRIPSI MAHASISWA</span>
 					</a>
 				</li>
-
 				<li>
 					<a href="logout.php">
 						<i class="material-icons">input</i>

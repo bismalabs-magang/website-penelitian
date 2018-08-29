@@ -18,12 +18,12 @@ VALUES ('$nim','$judul1', '$deskripsi_judul1', '$judul2', '$deskripsi_judul2', '
 
 if ($connection->query($query) === TRUE) {
 
-    //echo "data berhasil disimpan";
-    header("location:ajukan-judul.php");
+	//echo "data berhasil disimpan";
+	header("location:ajukan-judul.php");
 
 }else{
 
-    echo "data gagal disimpan";
-    echo "<br>";
-    echo "Error: " . $query . "<br>" . $connection->error;
+	echo "data gagal disimpan";
+	echo "<br>";
+	echo "Error: " . $query . "<br>" . $connection->error;
 }

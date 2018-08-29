@@ -31,7 +31,29 @@ include("part/sidebar.php");
 							<div class="form-group">
 								<label>JUDUL PENELITIAN</label>
 								<div class="form-line">
-									<input type="text" name="nama" class="form-control" placeholder="judul penelitian" />
+									<input type="text" name="nama" class="form-control" placeholder="judul penelitian" >
+								</div>
+							</div>
+							<div class="form-group">
+								<br>
+								<div class="form-group">
+									<label>KATEGORI KATEGORI PENELITIAN</label>
+									<div class="form-line">
+									<select class="form-control show-tick" name="fakultas" required>
+									<option value="">-- PILIH KATEGORI --</option>
+
+									<?php
+											include('../config/koneksi.php');
+											$query = "SELECT * FROM tbl_kategori_penelitian ORDER BY nama_kategori ASC";
+											$hasil = mysqli_query($connection, $query);
+
+											while($row = mysqli_fetch_array($hasil)) {
+									?>
+												<option value="<?php echo $row['id_kategori'] ?>"><?php echo $row['nama_kategori'] ?></option>
+
+									<?php } ?>
+								</select>
+									</div>
 								</div>
 							</div>
 							<div class="form-group">
@@ -41,8 +63,9 @@ include("part/sidebar.php");
 							</div>
 							<div class="form-group">
 								<label>DESKRPSI PENELITIAN</label>
+								<div class="form-line">
 								<textarea class="form-control" rows="3" name="deskripsi" placeholder="Masukkan Deskripsi Penelitian"></textarea>
-								
+								</div>
 							</div>
 							<button type="submit" class="btn bg-green waves-effect">
 							<i class="material-icons">save</i>

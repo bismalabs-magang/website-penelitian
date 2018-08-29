@@ -12,9 +12,9 @@ $query = "UPDATE tbl_skripsi SET judul1 = '$judul1', deskripsi_judul1 = '$deskri
 
 
 if ($connection->query($query) === TRUE) {
-    header("location:ajukan-judul.php");
+	header("location:ajukan-judul.php");
 } else {
-    echo "Error: " . $query . "<br>" . $connection->error;
-    echo "<br>";
-    echo "<button><a href='tambah-judul.php'>Tambah Data Judul Skripsi</a></button>";
+	echo "Error: " . $query . "<br>" . $connection->error;
+	echo "<br>";
+	echo "<button><a href='tambah-judul.php'>Tambah Data Judul Skripsi</a></button>";
 }

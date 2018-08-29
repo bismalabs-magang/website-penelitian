@@ -7,13 +7,13 @@ include('../config/koneksi.php');
 $nama       = $_POST['nama'];
 
 //query
-$query = "INSERT INTO tbl_jurusan (nama_jurusan)
+$query = "INSERT INTO tbl_kategori_penelitian (nama_kategori)
 VALUES ('$nama')";
 
 if ($connection->query($query) === TRUE) {
 
 	//echo "data berhasil disimpan";
-	header("location:jurusan.php");
+	header("location:kategori-penelitian.php");
 
 }else{
 

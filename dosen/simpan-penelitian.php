@@ -15,9 +15,9 @@ $ukuran     = $_FILES['file']['size'];
 $file_tmp   = $_FILES['file']['tmp_name'];
 
 //proses upload
-if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
+if(in_array($ekstensi, $ekstensi_diperbolehkan) === true OR empty($file_tmp)){
 	
-	if($ukuran < 10000000){
+	if($ukuran < 10000000 OR empty($file_tmp)){
 	
 		move_uploaded_file($file_tmp, '../file/'.$file);
 		$query = "INSERT INTO tbl_penelitian (nidn, judul_penelitian, deskripsi_penelitian, file_penelitian) VALUES ('$nidn', '$nama', '$deskripsi', '$file')";

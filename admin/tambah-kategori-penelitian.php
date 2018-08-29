@@ -19,7 +19,7 @@ include("part/sidebar.php");
 				<div class="card">
 					<div class="header">
 						<h2>
-						TAMBAH DATA JURUSAN
+						DATA KATEGORI PENELITIAN
 						</h2>
 						<div class="header-dropdown m-r--5">
 							
@@ -27,11 +27,11 @@ include("part/sidebar.php");
 					</div>
 					<div class="body">
 						
-						<form action="simpan-jurusan.php" method="POST">
+						<form action="simpan-kategori-penelitian.php" method="POST">
 							<div class="form-group">
-								<label>NAMA JURUSAN</label>
+								<label>NAMA KATEGORI</label>
 								<div class="form-line">
-									<input type="text" name="nama" class="form-control" placeholder="Nama Jurusan" />
+									<input type="text" name="nama" class="form-control" placeholder="Nama Kategori"/>
 								</div>
 							</div>
 								<button type="submit" class="btn bg-green waves-effect">

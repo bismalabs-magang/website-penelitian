@@ -13,11 +13,11 @@ $query = "DELETE FROM tbl_mahasiswa WHERE nim = '$id'";
 $result = mysqli_query($connection, $query);
 if ($connection->query($query) === TRUE) {
 
-     header("location:mahasiswa.php"); 
+	 header("location:mahasiswa.php"); 
 
 } else {
-    echo "Error: " . $query . "<br>" . $connection->error;
-    echo "<br>";
-    echo "<button><a href='tambah-mahasiswa.php'>Tambah Data Mahasiswa</a></button>";
+	echo "Error: " . $query . "<br>" . $connection->error;
+	echo "<br>";
+	echo "<button><a href='tambah-mahasiswa.php'>Tambah Data Mahasiswa</a></button>";
 }
  ?>
