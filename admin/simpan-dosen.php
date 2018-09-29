@@ -7,7 +7,7 @@ include('../config/koneksi.php');
 $nama       = $_POST['nama'];
 $nidn       = $_POST['nidn'];
 $password   = MD5($_POST['password']);
-$fakultas	= $_POST['fakultas'];
+$fakultas   = $_POST['fakultas'];
 
 //query
 $query = "INSERT INTO tbl_dosen (nama_dosen, nidn, password, id_fakultas)

@@ -51,42 +51,42 @@ include("part/sidebar.php");
 							</div>
 
 							<div class="form-group">
-                    			<label>PILIH FAKULTAS</label>
-                    			<div class="form-line">
-                  				<select class="form-control show-tick" name="fakultas" required>
-                                        <option value="">-- PILIH FAKULTAS --</option>
-              							<?php
-               							include('../config/koneksi.php');
-                						$query = "SELECT * FROM tbl_fakultas ORDER BY nama_fakultas ASC";
-                						$hasil = mysqli_query($connection, $query);
+								<label>PILIH FAKULTAS</label>
+								<div class="form-line">
+								<select class="form-control show-tick" name="fakultas" required>
+										<option value="">-- PILIH FAKULTAS --</option>
+										<?php
+										include('../config/koneksi.php');
+										$query = "SELECT * FROM tbl_fakultas ORDER BY nama_fakultas ASC";
+										$hasil = mysqli_query($connection, $query);
 
-                						while($row = mysqli_fetch_array($hasil)) {
-              							?>
-                                        <option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
+										while($row = mysqli_fetch_array($hasil)) {
+										?>
+										<option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
 
-              							<?php } ?>
-             				 		</select>
-                    			</div>
-                  			</div>
+										<?php } ?>
+									</select>
+								</div>
+							</div>
 
-                  			<div class="form-group">
-                    			<label>PILIH JURUSAN</label>
-                    			<div class="form-line">
-                  				<select class="form-control show-tick" name="prodi" required>
-                                        <option value="">-- PILIH JURUSAN --</option>
-              							<?php
-               							include('../config/koneksi.php');
-                						$query = "SELECT * FROM tbl_jurusan ORDER BY nama_jurusan ASC";
-                						$hasil = mysqli_query($connection, $query);
+							<div class="form-group">
+								<label>PILIH JURUSAN</label>
+								<div class="form-line">
+								<select class="form-control show-tick" name="prodi" required>
+										<option value="">-- PILIH JURUSAN --</option>
+										<?php
+										include('../config/koneksi.php');
+										$query = "SELECT * FROM tbl_jurusan ORDER BY nama_jurusan ASC";
+										$hasil = mysqli_query($connection, $query);
 
-                						while($row = mysqli_fetch_array($hasil)) {
-              							?>
-                                        <option value="<?php echo $row['id_jurusan'] ?>"><?php echo $row['nama_jurusan'] ?></option>
+										while($row = mysqli_fetch_array($hasil)) {
+										?>
+										<option value="<?php echo $row['id_jurusan'] ?>"><?php echo $row['nama_jurusan'] ?></option>
 
-              							<?php } ?>
-             				 		</select>
-                    			</div>
-                  			</div>
+										<?php } ?>
+									</select>
+								</div>
+							</div>
 
 							<button type="submit" class="btn bg-green waves-effect">
 							<i class="material-icons">save</i>

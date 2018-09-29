@@ -43,5 +43,5 @@ if($_SESSION['level'] == "dosen" AND $_SESSION['username'] == TRUE) {
 	?>
 
 <?php }else{ ?>
-	<?php header("location:../login.php")  ?>
+	<?php header("location:../index.php")  ?>
 <?php } ?>

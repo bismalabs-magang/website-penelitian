@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 	?>
-	
+
 	<?php
 	//include header.php
 	include("part/header.php");
@@ -22,41 +22,37 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 					<div class="card">
 						<div class="header">
 							<h2>
-								DATA DOSEN
+								DETAIL PENELITIAN
 							</h2>
-							<div class="header-dropdown m-r--5">
-								<li class="dropdown">
-									<a href="tambah-dosen.php" class="btn btn-success btn-md">TAMBAH DOSEN</a>
-								</li>
-							</div>
 						</div>
 						<div class="body">
 							<table class="table table-bordered dataTable js-exportable">
-								<thead>
-								<tr>
-									<th scope="col">NIDN</th>
-									<th scope="col">NAMA DOSEN</th>
-									<th scope="col">FAKULTAS</th>
-									<th scope="col">AKSI</th>
-								</tr>
-								</thead>
 								<tbody>
 									<?php
 										include('../config/koneksi.php');
-										$query = "SELECT * FROM tbl_dosen as a JOIN tbl_fakultas as b ON a.id_fakultas = b.id_fakultas ORDER BY a.nama_dosen ASC";
+										$id = $_GET['id'];
+										$query = "SELECT * FROM tbl_penelitian as a join tbl_kategori_penelitian WHERE id_penelitian = '$id' ORDER BY file_penelitian DESC";
 										$hasil = mysqli_query($connection, $query);
-
 										while($row = mysqli_fetch_array($hasil)) {
 									?>
 									<tr>
-										<td><?php echo $row["nidn"] ?></td>
-										<td><?php echo $row["nama_dosen"] ?></td>
-										<td><?php echo $row["nama_fakultas"] ?></td>
-										<td style="text-align: center">
-											<a href="edit-dosen.php?id=<?php echo $row["nidn"] ?>" class="btn btn-success btn-sm">Edit</a>
-
-											<a href="delete-dosen.php?id=<?php echo $row["nidn"] ?>" class="btn btn-danger btn-sm">Delete</a>
+										<tr>
+										<td><b>JUDUL</b></td>
+										<td><?php echo $row["judul_penelitian"] ?></td>
+										</tr>
+										<td><b>DESKRIPSI</b></td>
+										<td><?php echo $row["deskripsi_penelitian"] ?></td>
+									</tr>
+										<td><b>FILE PENELITIAN</b></td>
+										<td><a href="../file/<?php echo $row["file_penelitian"] ?>" type="submit" class="btn bg-green waves-effect">
+											<i class="material-icons">cloud_download</i>
+											<span>DOWNLOAD</span>
+											</a>
 										</td>
+									</tr>
+									<tr>
+										<td><b>KATEGORI PENELITIAN</b></td>
+										<td><?php echo $row["nama_kategori"] ?></td>
 									</tr>
 
 								<?php } ?>

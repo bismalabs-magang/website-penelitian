@@ -7,8 +7,8 @@ include('../config/koneksi.php');
 $nama       = $_POST['nama'];
 $nim        = $_POST['nim'];
 $password   = MD5($_POST['password']);
-$jurusan	= $_POST['jurusan'];
-$fakultas	= $_POST['fakultas'];
+$jurusan    = $_POST['jurusan'];
+$fakultas   = $_POST['fakultas'];
 
 //query
 

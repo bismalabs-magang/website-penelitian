@@ -20,12 +20,12 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo"><strong>Website</strong> Penelitian Unwaha</a>
+					<a href="index.php" class="logo"><strong>Website</strong> Penelitian Unwaha</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Semua Judul Skripsi</a>
-						<a href="elements.html">Semua Judul Penelitian</a>
-						<a href="elements.html">Lab Penelitian</a>
+						<a href="index.php">Home</a>
+						<a href="index.php">Semua Judul Skripsi</a>
+						<a href="index.php">Semua Judul Penelitian</a>
+						<a href="index.php">Lab Penelitian</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>

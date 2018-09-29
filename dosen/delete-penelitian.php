@@ -26,4 +26,4 @@ if ($connection->query($query) === TRUE) {
 	echo "<br>";
 	echo "<button><a href='tambah-dosen.php'>Tambah Data Dosen</a></button>";
 }
- ?>
+?>

@@ -55,19 +55,19 @@ include("part/sidebar.php");
 									<label>PILIH FAKULTAS</label>
 									<div class="form-line">
 								<select class="form-control show-tick" name="fakultas" required>
-                                    <option value="">-- PILIH FAKULTAS --</option>
+									<option value="">-- PILIH FAKULTAS --</option>
 
-                        <?php
+						<?php
 								include('../config/koneksi.php');
 								$query = "SELECT * FROM tbl_fakultas ORDER BY nama_fakultas ASC";
 								$hasil = mysqli_query($connection, $query);
 
 								while($row = mysqli_fetch_array($hasil)) {
 						?>
-                                	<option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
+									<option value="<?php echo $row['id_fakultas'] ?>"><?php echo $row['nama_fakultas'] ?></option>
 
 						<?php } ?>
-						</select>
+								</select>
 									</div>
 								</div>
 
@@ -76,16 +76,16 @@ include("part/sidebar.php");
 									<label>PILIH JURUSAN</label>
 									<div class="form-line">
 								<select class="form-control show-tick" name="jurusan" required>
-                                    <option value="">-- PILIH JURUSAN --</option>
+									<option value="">-- PILIH JURUSAN --</option>
 
-                        <?php
+						<?php
 								include('../config/koneksi.php');
 								$query = "SELECT * FROM tbl_jurusan ORDER BY nama_jurusan ASC";
 								$hasil = mysqli_query($connection, $query);
 
 								while($row = mysqli_fetch_array($hasil)) {
 						?>
-                                	<option value="<?php echo $row['id_jurusan'] ?>"><?php echo $row['nama_jurusan'] ?></option>
+									<option value="<?php echo $row['id_jurusan'] ?>"><?php echo $row['nama_jurusan'] ?></option>
 
 						<?php } ?>
 						</select>

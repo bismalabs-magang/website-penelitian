@@ -10,14 +10,6 @@
 			<div class="info-container">
 				<div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['username'] ?></div>
 				<div class="email">john.doe@example.com</div>
-				<div class="btn-group user-helper-dropdown">
-					<i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-					<ul class="dropdown-menu pull-right">
-						<li><a href="profil.php"><i class="material-icons">person</i>PROFIL</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="logout.php"><i class="material-icons">input</i>KELUAR</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 		<!-- #User Info -->
@@ -32,12 +24,11 @@
 					</a>
 				</li>
 				<li>
-					<a href="profil.php">
+					<a href="profil-dosen.php">
 						<i class="material-icons">person</i>
 						<span>PROFIL DOSEN</span>
 					</a>
 				</li>
-
 				<li>
 					<a href="penelitian.php">
 						<i class="material-icons">work</i>
@@ -46,12 +37,11 @@
 				</li>
 				
 				<li>
-					<a href="dosen-pembimbing.php">
+					<a href="skripsi-mahasiswa.php">
 						<i class="material-icons">local_library</i>
 						<span>SKRIPSI MAHASISWA</span>
 					</a>
 				</li>
-
 				<li>
 					<a href="logout.php">
 						<i class="material-icons">input</i>

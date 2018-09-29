@@ -36,8 +36,8 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 								<tr>
 									<th scope="col">NIDN</th>
 									<th scope="col">JUDUL PENELITIAN</th>
-									<th scope="col">FILE PENELITIAN</th>
-									<th scope="col">AKSI</th>
+									<th scope="col" style="width:20%">FILE PENELITIAN</th>
+									<th scope="col" style="width:30%">AKSI</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -52,12 +52,13 @@ if(isset($_SESSION['level']) == "dosen" AND $_SESSION['username']) {
 									<tr>
 										<td><?php echo $row["nidn"] ?></td>
 										<td><?php echo $row["judul_penelitian"] ?></td>
-										<td><a href="../file/<?php echo $row["file_penelitian"] ?>"><?php echo $row["file_penelitian"] ?></a></td>
-										<td style="text-align: center">
-											<a href="detail-peneitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-primary btn-sm">Detail </a>
-
-											<a href="edit-peneitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-success btn-sm">Edit</a>
-
+										<td style="width: 20%;text-align: center;"><a href="../file/<?php echo $row["file_penelitian"] ?>" type="submit" class="btn bg-green waves-effect">
+											<i class="material-icons">cloud_download</i>
+											<span>DOWNLOAD</span>
+											</a></td>
+										<td style="text-align: center;width: 30%">
+											<a href="detail-penelitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-primary btn-sm">Detail </a>
+											<a href="edit-penelitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-success btn-sm">Edit</a>
 											<a href="delete-penelitian.php?id=<?php echo $row["id_penelitian"] ?>" class="btn btn-danger btn-sm">Delete</a>
 										</td>
 									</tr>
